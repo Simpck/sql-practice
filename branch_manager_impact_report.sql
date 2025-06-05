@@ -3,11 +3,11 @@ FROM branch
 JOIN employee
 ON branch.mgr_id = employee.emp_id
 JOIN (
-    SELECT employee.super_id, COUNT(employee.emp_id) AS employee_count
+    SELECT employee.branch_id, COUNT(employee.emp_id) AS employee_count
     FROM employee
-    GROUP BY employee.super_id
+    GROUP BY employee.branch_id
 ) AS employee_count
-ON branch.mgr_id = employee_count.super_id
+ON branch.branch_id = employee_count.branch_id
 JOIN (
     SELECT employee.branch_id, SUM(total_sales.total_sales) AS total_branch
     FROM (
@@ -35,4 +35,4 @@ JOIN (
     ) AS total_sales_rank
 ) AS rank_pos
 ON branch.branch_id = rank_pos.branch_id
-WHERE rank_pos.rank_pos = 1;
+WHERE rank_pos = 1;
