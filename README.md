@@ -10,9 +10,12 @@ This repository contains SQL queries written as part of my data analytics learni
 - **`client_activity_report.sql`**  
   Sample query exploring client interaction or sales metrics.
 
+- **`branch_manager_impact_report.sql`**  
+  Analyzes the performance impact of branch managers using aggregation and logic to summarize their contribution to branch success.
+
 ## 🛠 Tools Used
 
-- SQL (PostgreSQL-compatible syntax)
+- SQL
 - Git for version control
 
 ## 📌 Topics Covered
@@ -20,6 +23,12 @@ This repository contains SQL queries written as part of my data analytics learni
 - Aggregation and joins
 - Window functions
 - Common Table Expressions (CTEs)
+- Subqueries
+- Subqueries (inline and correlated)
+- Filtering by calculated fields and conditions
+- Grouping and summarizing performance data (branch, manager, employee)
+- Employee hierarchy analysis
+- Clean formatting and logical breakdown of complex queries
 
 ---
 
